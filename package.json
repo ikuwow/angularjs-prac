@@ -1,0 +1,26 @@
+{
+  "name": "angularjs-prac",
+  "version": "1.0.0",
+  "description": "angular-prac ===========",
+  "main": "index.js",
+  "scripts": {
+    "postinstall": "./node_modules/.bin/bower install",
+    "prestart": "npm install",
+    "start": "http-server -a 0.0.0.0 -p 8000",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ikuwow/angularjs-prac.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ikuwow/angularjs-prac/issues"
+  },
+  "homepage": "https://github.com/ikuwow/angularjs-prac#readme",
+  "dependencies": {
+    "bower": "^1.7.7",
+    "http-server": "^0.8.5"
+  }
+}

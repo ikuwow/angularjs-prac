@@ -1,0 +1,21 @@
+{
+  "name": "angularjs-prac",
+  "description": "angular-prac ===========",
+  "main": "index.js",
+  "authors": [
+    "Ikuo Degawa <degawa@ikuwow.com>"
+  ],
+  "license": "ISC",
+  "homepage": "https://github.com/ikuwow/angularjs-prac",
+  "moduleType": [],
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "^1.4.9"
+  }
+}
