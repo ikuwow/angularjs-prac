@@ -1,7 +1,12 @@
 <!DOCTYPE html>
 <html ng-app><!-- a[ng]larjs -->
 <head>
+  <meta charset="utf-8"/>
   <title>AngularJS</title>
+
+  <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css">
+  <link rel="stylesheet" href="css/app.css">
+
   <script src="bower_components/angular/angular.min.js"></script>
 </head>
 <body>
@@ -13,6 +18,7 @@
 
 <p>Hello world, {{name}}</p><!-- display model "name" -->
 <p> 5 times 3 is {{ 5 * 3 }}</p><!-- javascript notation can be used in {{ }} -->
+<p>Nothing here {{ 'yet' + '!' }}</p>
 
 </body>
 </html>

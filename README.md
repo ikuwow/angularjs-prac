@@ -6,5 +6,5 @@ AngularJS Practice
 
 ## Contents
 
-* AngularJS Tutorial
-  * https://www.youtube.com/watch?v=WuiHuZq_cg4
+* AngularJS Tutorial (PhoneCat Tutorial App)
+  * https://docs.angularjs.org/tutorial
