@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html ng-app><!-- a[ng]larjs -->
+<html ng-app="phonecatApp"><!-- a[ng]larjs -->
 <head>
   <meta charset="utf-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -9,8 +9,9 @@
   <link rel="stylesheet" href="css/app.css">
 
   <script src="bower_components/angular/angular.min.js"></script>
+  <script src="js/controllers.js"></script>
 </head>
-<body>
+<body ng-controller="PhoneListCtrl"> <!-- phonecatApp.controller('PhoneListCtrl', ...) -->
 
 <div class="container">
 
@@ -27,13 +28,9 @@
 <p>Total number of phones: 2</p>
 
 <ul>
-  </li>
-    <span>Nexus S</span>
-    <p>Fast just got faster with Nexus S.</p>
-  </li>
-  </li>
-    <span>Motorola XOOM™ with Wi-Fi</span>
-    <p>The Next, Next Generation tablet.</p>
+  <li ng-repeat="phone in phones"> <!-- loop phones as phone -->
+    <span>{{phone.name}}</span>
+    <p>{{phone.snippet}}</p>
   </li>
 </ul>
 
