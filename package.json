@@ -21,6 +21,9 @@
   "homepage": "https://github.com/ikuwow/angularjs-prac#readme",
   "dependencies": {
     "bower": "^1.7.7",
-    "http-server": "^0.8.5"
+    "http-server": "^0.8.5",
+    "karma": "^0.13.19",
+    "karma-jasmine": "^0.3.7",
+    "karma-safari-launcher": "^0.1.1"
   }
 }
