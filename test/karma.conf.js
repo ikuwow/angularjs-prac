@@ -16,10 +16,12 @@ module.exports = function(config){
             'jasmine'
         ],
         browsers: [
-            'Safari'
+            'Safari', 'Chrome', 'Firefox'
         ],
         plugins: [
             'karma-safari-launcher',
+            'karma-chrome-launcher',
+            'karma-firefox-launcher',
             'karma-jasmine'
         ]
     });
