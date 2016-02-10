@@ -2,6 +2,8 @@
 var phonecatApp = angular.module('phonecatApp', []); // html ng-app=...
 
 phonecatApp.controller('PhoneListCtrl', function($scope) {
+    var dates = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
+    $scope.date = dates[(new Date()).getDay()];
     $scope.phones = [
         {
             'name': 'Nexus S',
