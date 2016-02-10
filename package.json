@@ -3,12 +3,6 @@
   "version": "1.0.0",
   "description": "angular-prac ===========",
   "main": "index.js",
-  "scripts": {
-    "postinstall": "./node_modules/.bin/bower install",
-    "prestart": "npm install",
-    "start": "http-server -a 0.0.0.0 -p 8000",
-    "test": "node node_modules/karma/bin/karma start test/karma.conf.js"
-  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/ikuwow/angularjs-prac.git"
@@ -19,11 +13,32 @@
     "url": "https://github.com/ikuwow/angularjs-prac/issues"
   },
   "homepage": "https://github.com/ikuwow/angularjs-prac#readme",
-  "dependencies": {
+  "devDependencies": {
     "bower": "^1.7.7",
     "http-server": "^0.8.5",
     "karma": "^0.13.19",
+    "karma-chrome-launcher": "^0.2.2",
+    "karma-firefox-launcher": "^0.1.7",
     "karma-jasmine": "^0.3.7",
-    "karma-safari-launcher": "^0.1.1"
+    "karma-safari-launcher": "^0.1.1",
+    "protractor": "^3.1.0",
+    "shelljs": "^0.6.0",
+    "tmp": "0.0.28"
+  },
+  "scripts": {
+    "postinstall": "./node_modules/.bin/bower install",
+
+    "prestart": "npm install",
+    "start": "http-server -a 0.0.0.0 -p 8000",
+
+    "pretest": "npm install",
+    "test": "node node_modules/karma/bin/karma start test/karma.conf.js",
+
+    "preupdate-webdriver": "npm install",
+    "update-webdriver": "webdriver-manager update",
+
+    "preprotractor": "npm run update-webdriver",
+    "protractor": "./node_modules/.bin/protractor test/protractor-conf"
+
   }
 }

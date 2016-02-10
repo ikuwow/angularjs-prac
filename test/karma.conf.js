@@ -2,9 +2,10 @@ module.exports = function(config){
     config.set({
         basePath: '../',
         files: [
-            'test/unit/**/*.js',
             'app/bower_components/angular/angular.js',
             'app/bower_components/angular-mocks/angular-mocks.js',
+            'app/js/**/*.js', // order is very important
+            'test/unit/**/*.js'
         ],
         exclude : [
             'app/lib/angular/angular-loader.js',
