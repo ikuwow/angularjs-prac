@@ -27,14 +27,19 @@
 
 <p>Today: {{ date }}</p>
 
-<p>Total number of phones: {{ phones.length }}</p>
+<div class="col-md-2">
+    Search: <input ng-model="query">
+</div>
 
-<ul>
-  <li ng-repeat="phone in phones"> <!-- loop phones as phone -->
-    <span>{{phone.name}}</span>
-    <p>{{phone.snippet}}</p>
-  </li>
-</ul>
+<div class="col-md-10">
+  <p>Total number of phones: {{ phones.length }}</p>
+  <ul class="phones">
+    <li ng-repeat="phone in phones | filter:query"> <!-- loop phones as phone -->
+      <span>{{phone.name}}</span>
+      <p>{{phone.snippet}}</p>
+    </li>
+  </ul>
+</div>
 
 <table>
   <tr><th>row number</th></tr>
