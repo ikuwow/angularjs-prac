@@ -20,5 +20,16 @@ describe('PhoneCat App', function() {
             expect(phoneList.count()).toBe(2);
 
         });
+
+        it('should display the current filter value in the title bar', function() {
+
+            var query = element(by.model('query'));
+
+            query.clear();
+            expect(browser.getTitle()).toMatch(/Google Phone Gallery:\s*$/);
+
+            query.sendKeys('nexus');
+            expect(browser.getTitle()).toMatch(/Google Phone Gallery: nexus$/);
+        });
     });
 });
