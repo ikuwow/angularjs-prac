@@ -34,12 +34,14 @@
     <select ng-model="orderProp">
       <option value="name">Alphabetical</option>
       <option value="age">Newest</option>
+      <option value="-age">Oldest</option>
     </select>
 </div>
 
 <div class="col-md-10">
-  <p>Filtered results ({{query}})</p>
+  <p>Filtered results (query: {{query}}, order: {{orderProp}})</p>
   <p>Total number of phones: {{ phones.length }}</p>
+
   <ul class="phones">
     <li ng-repeat="phone in phones | filter:query | orderBy:orderProp">
       <!-- loop phones as phone -->
