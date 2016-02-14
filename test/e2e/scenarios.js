@@ -31,5 +31,30 @@ describe('PhoneCat App', function() {
             query.sendKeys('nexus');
             expect(browser.getTitle()).toMatch(/Google Phone Gallery: nexus$/);
         });
+
+        it('should be possible to control phone order via the drop down select box', function(){
+            var phoneNameColumn = element.all(by.repeater('phone in phones').column('phone.name'));
+            var query = element(by.model('query'));
+
+            function getNames() {
+                return phoneNameColumn.map(function(elm) {
+                    return elm.getText();
+                });
+            }
+
+            query.sendKeys('tablet');
+
+            expect(getNames()).toEqual([
+                "Motorola XOOM™ with Wi-Fi",
+                "MOTOROLA XOOM™"
+            ]);
+
+            element(by.model('orderProp')).element(by.css('option[value="name"]')).click();
+
+            expect(getNames()).toEqual([
+                "MOTOROLA XOOM™",
+                "Motorola XOOM™ with Wi-Fi"
+            ]);
+        });
     });
 });
