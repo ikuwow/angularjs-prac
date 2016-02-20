@@ -47,7 +47,11 @@
       <!-- loop phones as phone -->
       <!-- filter by model query -->
       <!-- order by model orderProp -->
-      <span>{{phone.name}}</span>
+      <a href="#/phones/{{phone.id}}">
+          <img ng-src="{{phone.imageUrl}}">
+          <!-- ng-src prevents the brower from treateng the angular markus iterally -->
+      </a>
+      <a href="#/phones/{{phone.id}}">{{phone.name}}</a>
       <p>{{phone.snippet}}</p>
     </li>
   </ul>
